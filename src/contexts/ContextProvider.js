@@ -6,7 +6,7 @@ const initialState = {
     chat : false,
     cart: false,
     userProfile: false,
-    notificatioin: false
+    notification: false
 }
 
 export const ContextProvider = ({children}) => {
@@ -31,8 +31,11 @@ export const ContextProvider = ({children}) => {
       };
 
     const handleClick = (clicked) => {
+       
         setIsClicked({...initialState, [clicked]: true})
     }
+
+    
 
     return (
         <StateContext.Provider value={{
